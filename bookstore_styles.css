@@ -1,0 +1,51 @@
+
+.book_cover {
+  width: 220px;
+    height: 310px;
+}
+
+.container-app {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 75px;
+}
+
+
+
+.flip-book-inner {
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-book:hover .flip-book-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-book-front, .flip-book-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-book-back {
+    transform: rotateY(180deg);
+}
+
+.flip-book {
+    background-color: transparent;
+    width: 250px;
+    height: 410px;
+    perspective: 1000px;
+}
+
+button {
+     margin-left: 75px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}

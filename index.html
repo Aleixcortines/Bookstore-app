@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Bookstore app</title>
+
+    <!-- version 4.2.1 bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- More libraries for bootstrap-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+    <!-- 1. Add latest jQuery and fancybox files -->
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!--My own style CSS-->
+    <link rel="stylesheet" href="bookstore_styles.css">
+
+</head>
+
+<body>
+    <div id="app">
+    
+    <header>
+        
+        <h1>Ubiqum Bookstore</h1>
+        <label>
+                <input type="text" v-model="searchBook" placeholder="Search here...">
+            
+        </label>
+        
+    </header>
+
+        <div class="container-app">
+
+            <div class="books flip-book" v-for="book in searchItems">
+
+                <div class="flip-book-inner">
+
+                    <div class="flip-book-front">
+
+                        <img class="book_cover" v-bind:src="book.portada">
+
+                    </div>
+
+                    <div class="flip-book-back">
+
+                        <h2 class="book_title m-3">{{book.titulo}}</h2>
+                        <p class="book_description m-3">{{book.descripcion}}</p>
+                        
+       
+                            <button v-bind:href="book.detalle" data-fancybox="imagespreview">More Info</button>
+                                
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--Vue script-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Vue resource-->
+    <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+    <!--JS script-->
+    <script src="bookstore_data.js"></script>
+</body>
+
+</html>
