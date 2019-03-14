@@ -46,11 +46,7 @@ var dataVue = new Vue({
 
                 });
         },
-        
-       
-              
+                  
     },
     
-   
-
 });

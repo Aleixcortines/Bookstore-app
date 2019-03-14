@@ -42,10 +42,29 @@
 
 button {
      margin-left: 75px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     margin: 20px;
+    
+}
+
+.input-camp {
+    margin-top: 109px;
+    margin-right: 41px;
+}
+
+
+
+.logo-image {
+        height: 200px;
+}
+
+.name-logo {
+    margin-right: 83px;
 }
