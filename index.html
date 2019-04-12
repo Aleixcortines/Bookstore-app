@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>The Bookstore app</title>
-
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
     <!-- version 4.2.1 bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- More libraries for bootstrap-->
@@ -23,18 +24,20 @@
 
 <body>
     <div id="app">
-    
-    <header>
-       
-       <img class="logo-image" src="images/logo-bookstore.png" alt="Logo">
-        
-        <h1 class="name-logo">Ubiqum Bookstore</h1>
-        <label>
-                <input class="input-camp" type="text" v-model="searchBook" placeholder="Search here...">
+
+        <header>
+
+            <img class="logo-image" src="images/logo-bookstore.png" alt="Logo">
+
+            <h1 class="name-logo">Ubiqum Bookstore</h1>
+            <label>
+                <h6 class="name-logo"> Search a boook: <input class="input-camp" type="text" v-model="searchBook" placeholder="search here"></h6>
+                
+            </label>
             
-        </label>
-        
-    </header>
+            
+
+        </header>
 
         <div class="container-app">
 
@@ -52,10 +55,10 @@
 
                         <h2 class="book_title m-3">{{book.titulo}}</h2>
                         <p class="book_description m-3">{{book.descripcion}}</p>
-                        
-       
-                            <button v-bind:href="book.detalle" data-fancybox="imagespreview">More Info</button>
-                                
+
+
+                        <button v-bind:href="book.detalle" data-fancybox="imagespreview">More Info</button>
+
                     </div>
 
                 </div>
