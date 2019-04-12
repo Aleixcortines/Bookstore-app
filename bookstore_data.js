@@ -1,5 +1,4 @@
 var dataVue = new Vue({
-
     el: '#app',
     //on mounted We put this function is to call my json (on myjason.com url)
     mounted() {
